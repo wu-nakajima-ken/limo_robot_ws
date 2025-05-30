@@ -13,11 +13,11 @@ def generate_launch_description():
     # ⬇️ ここだけ絶対パスに変更（あなたの指定）
     map_dir = LaunchConfiguration(
         'map',
-        default='/root/rmf_s502_real/map.yaml')
+        default='/root/rmf_s502_robot/map.yaml')
 
     param_dir = LaunchConfiguration(
         'params_file',
-        default='/root/rmf_s502_real/limo_param.yaml')
+        default='/root/rmf_s502_robot/limo_param.yaml')
 
     nav2_launch_file_dir = os.path.join(
         get_package_share_directory('nav2_bringup'), 'launch')
