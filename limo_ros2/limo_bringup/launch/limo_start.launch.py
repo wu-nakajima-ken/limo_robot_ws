@@ -27,6 +27,12 @@ def generate_launch_description():
             name='base_link_to_imu',
             arguments="0.0 0.0 0.0 0.0 0.0 0.0 /base_link /imu_link".split(
                 ' ')),
+        launch_ros.actions.Node(
+            package='tf2_ros',
+            executable='static_transform_publisher',
+            name='base_link_to_footprint',
+            arguments="0 0 0 0 0 0 base_link base_footprint".split()
+                   ),
         # launch_ros.actions.Node(
         #     package='robot_pose_ekf',
         #     node_executable='robot_pose_ekf',
